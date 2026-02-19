@@ -17,7 +17,7 @@ function App() {
 
   // Date Lock Logic
   const targetDate = new Date('2026-02-18T00:00:00'); // Midnight on Feb 18
-  const [isDateLocked, setIsDateLocked] = useState(true);
+  const [isDateLocked, setIsDateLocked] = useState(() => new Date() < targetDate);
 
   useEffect(() => {
     const checkDate = () => {

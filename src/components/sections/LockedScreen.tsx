@@ -26,8 +26,7 @@ export function LockedScreen({ targetDate }: LockedScreenProps) {
                     seconds: Math.floor((difference / 1000) % 60),
                 });
             } else {
-                // Should reload to unlock
-                window.location.reload();
+                // Timer expired
             }
         };
 
